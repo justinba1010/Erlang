@@ -1,2 +1,2 @@
 %% encoding: UTF-8
-{modules,[drop,mathdemo,pattern_matching]}.
+{modules,[mathdemo]}.

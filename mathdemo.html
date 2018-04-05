@@ -10,7 +10,7 @@
 <hr>
 
 <h1>Module mathdemo</h1>
-<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>mathdemo.
+<ul class="index"><li><a href="#description">Description</a></li><li><a href="#types">Data Types</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>mathdemo.
 <p>Copyright © 2017 by Simon St.Laurent</p>
 
 <p><b>Version:</b> 0.1</p>
@@ -20,8 +20,24 @@
   O'Reilly Media, Inc., 2017.</li></ul></p>
 
 <h2><a name="description">Description</a></h2>mathdemo
+<h2><a name="types">Data Types</a></h2>
+
+<h3 class="typedecl"><a name="type-sin">sin()</a></h3>
+<p><tt>sin(X) = float()</tt></p>
+
+
+<h3 class="typedecl"><a name="type-sin">sin()</a></h3>
+<p><tt>sin(X, N) = float()</tt></p>
+
+
 <h2><a name="index">Function Index</a></h2>
-<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#abs-1">abs/1</a></td><td></td></tr>
+<table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#abs-1">abs/1</a></td><td>Absolute value; abs(3) = 3.</td></tr>
+<tr><td valign="top"><a href="#compose-2">compose/2</a></td><td>Compose functions.</td></tr>
+<tr><td valign="top"><a href="#factorial-1">factorial/1</a></td><td>Factorial using recursion.</td></tr>
+<tr><td valign="top"><a href="#pi-0">pi/0</a></td><td>Pi constant.</td></tr>
+<tr><td valign="top"><a href="#sin-1">sin/1</a></td><td>Sine function using Taylor Series.</td></tr>
+<tr><td valign="top"><a href="#sin-2">sin/2</a></td><td>Sine function using Taylor Series.</td></tr>
+<tr><td valign="top"><a href="#sum_fact_denom-1">sum_fact_denom/1</a></td><td>Factorial denominator summation : sum_fact_denom ~ e.</td></tr>
 </table>
 
 <h2><a name="functions">Function Details</a></h2>
@@ -29,7 +45,37 @@
 <h3 class="function"><a name="abs-1">abs/1</a></h3>
 <div class="spec">
 <p><tt>abs(Number) -&gt; any()</tt></p>
-</div>
+</div><p>Absolute value; abs(3) = 3. abs(-3) = 3</p>
+
+<h3 class="function"><a name="compose-2">compose/2</a></h3>
+<div class="spec">
+<p><tt>compose(X, D) -&gt; any()</tt></p>
+</div><p>Compose functions</p>
+
+<h3 class="function"><a name="factorial-1">factorial/1</a></h3>
+<div class="spec">
+<p><tt>factorial(Number) -&gt; any()</tt></p>
+</div><p>Factorial using recursion</p>
+
+<h3 class="function"><a name="pi-0">pi/0</a></h3>
+<div class="spec">
+<p><tt>pi() -&gt; any()</tt></p>
+</div><p>Pi constant.</p>
+
+<h3 class="function"><a name="sin-1">sin/1</a></h3>
+<div class="spec">
+<p><tt>sin(X) -&gt; any()</tt></p>
+</div><p>Sine function using Taylor Series.</p>
+
+<h3 class="function"><a name="sin-2">sin/2</a></h3>
+<div class="spec">
+<p><tt>sin(X, N) -&gt; any()</tt></p>
+</div><p>Sine function using Taylor Series.</p>
+
+<h3 class="function"><a name="sum_fact_denom-1">sum_fact_denom/1</a></h3>
+<div class="spec">
+<p><tt>sum_fact_denom(Number) -&gt; any()</tt></p>
+</div><p>Factorial denominator summation : sum_fact_denom ~ e</p>
 <hr>
 
 <div class="navbar"><a name="#navbar_bottom"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview</a></td><td><a href="http://www.erlang.org/"><img src="erlang.png" align="right" border="0" alt="erlang logo"></a></td></tr></table></div>
