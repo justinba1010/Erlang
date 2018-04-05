@@ -22,7 +22,7 @@ get_item([Head | _], 0) -> Head;
 get_item(_,X) when X < 0 -> outOfBounds;
 get_item([_ | Tail], X) -> get_item(Tail,X-1).
 
-% @doc shuffle
+% @doc Fisher–Yates shuffle algorithm in Erlang
 shuffle(List) -> shuffle(List,[]).
 
 % @doc shuffle
