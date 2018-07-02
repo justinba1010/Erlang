@@ -7,3 +7,7 @@ push(Value, OldStack) -> [Value|OldStack].
 
 pop([]) -> empty;
 pop([Value|RestStack]) -> {Value, RestStack}.
+
+peak([]) -> empty;
+peak([Head|_]) ->
+  Head.
