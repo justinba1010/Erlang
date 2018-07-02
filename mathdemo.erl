@@ -3,7 +3,7 @@
 
 
 -module(mathdemo).
--export([abs/1,sum_fact_denom/1,factorial/1,sin/2,sin/1, cos/1, pi/0, compose/2,normalize/1]).
+-export([abs/1,sum_fact_denom/1,factorial/1,sin/2,sin/1, cos/1, pi/0, compose/2,normalize/1, pyth/1]).
 
 %% @doc Absolute value; abs(3) = 3. abs(-3) = 3
 abs(Number) when Number < 0 -> -Number;
@@ -69,3 +69,12 @@ compose([A | B],D) ->
     D(A(X))
   end,
   compose(B,E).
+
+pyth(N) ->
+    [ {A,B,C} ||
+        A <- lists:seq(1,N),
+        B <- lists:seq(1,N),
+        C <- lists:seq(1,N),
+        A+B+C =< N,
+        A*A+B*B == C*C
+    ].
