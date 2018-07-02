@@ -10,20 +10,19 @@ main() ->
 
 getList() -> getList([]).
 getList(List) ->
-    Line = io:get_line(""),
-    case Line of
-        eof -> lists:reverse(List);
-        "eof\n" -> lists:reverse(List);
-        Number ->
-            [Y|_] = string:split(Number,"\n"),
-            YY = string:to_integer(Y),
-            {YYY,_} = YY,
-            getList([YYY] ++ List)
+  Line = io:get_line(""),
+  case Line of
+    eof -> lists:reverse(List);
+    "eof\n" -> lists:reverse(List);
+    Number ->
+      [Y|_] = string:split(Number,"\n"),
+      {YY,_} = string:to_integer(Y),
+      getList([YY] ++ List)
     end.
 
 print_list([],_) -> ok;
-print_list([Head | Tail],X) when Head > X ->
-  io:format("~w~n",[Head]),
-  print_list(Tail);
+print_list([Head | Tail],X) when Head < X ->
+  io:format("~w~n", [Head]),
+  print_list(Tail,X);
 print_list([_ | Tail], X) ->
-  print_list(Tail).
+  print_list(Tail,X).
