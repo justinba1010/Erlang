@@ -3,7 +3,7 @@
 
 
 -module(mathdemo).
--export([abs/1,sum_fact_denom/1,factorial/1,sin/2,sin/1, cos/1, pi/0, compose/2,normalize/1, pyth/1]).
+-export([abs/1,sum_fact_denom/1,factorial/1,sin/2,sin/1, cos/1, pi/0, compose/2,normalize/1, pyth/1,e/1]).
 
 %% @doc Absolute value; abs(3) = 3. abs(-3) = 3
 abs(Number) when Number < 0 -> -Number;
@@ -78,3 +78,10 @@ pyth(N) ->
         A+B+C =< N,
         A*A+B*B == C*C
     ].
+e(X) ->
+  e(X,0,10).
+e(_,C,0) ->
+  C+1;
+e(X,C,N) ->
+  D = C + math:pow(X,-N)/factorial(N),
+  e(X,D,N-1).

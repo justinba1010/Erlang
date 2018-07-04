@@ -7,15 +7,15 @@
 
 new() -> {}.
 
-push(Value, List) ->
-  {Value, List}.
+push(Value, Stack) ->
+  {Value, Stack}.
 
 pop({}) -> empty;
-pop(List) -> %Use pattern matching to get head, and rest of stack.
-  List.
+pop(Stack) -> %Use pattern matching to get head, and rest of stack.
+  Stack.
 %%%   {Head, NewStack} = pop(OldStack). %%%
 stackToList(Stack) -> stackToList(Stack,[]).
 
-stackToList({},List) -> List;
+stackToList({},Stack) -> List;
 stackToList({Data,Stack},List) ->
   stackToList(Stack, [Data]++List).
