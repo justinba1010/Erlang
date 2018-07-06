@@ -1,12 +1,12 @@
 These data structures are implemented underneath as such.
 
 Binary Search Tree:   
-       1   
-     /   \   
-  -1       2    
-            \   
-              3   
-1> A1 = bst_scratch:new().    
+               1   
+             /   \   
+          -1       2    
+                    \   
+                      3   
+        1> A1 = bst_scratch:new().    
 {null,{},{}}   
 2> A2 = bst_scratch:push(A1,1).   
 {1,{},{}}   
