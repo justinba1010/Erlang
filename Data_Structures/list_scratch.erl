@@ -1,5 +1,5 @@
 -module(list_scratch).
--export([new/0,push/2,length/1,get/2,remove/2,reverse/1]).
+-export([new/0,push/2,length/1,get/2,remove/2,reverse/1,merge/2]).
 
 
 %Singly linked list using head attach
@@ -32,3 +32,9 @@ reverse(List) ->
 reverse(NewList,{}) -> NewList;
 reverse(NewList,{Head,Tail}) ->
   reverse({Head,NewList},Tail).
+
+merge(ListA, ListB) ->
+  merge(ListA,ListB,{}).
+merge({},{},ListC) -> reverse(ListC);
+merge({},{Head,Tail},ListC) -> merge({},Tail,{Head,ListC});
+merge({Head,Tail},ListB,ListC) -> merge(Tail,ListB,{Head,ListC}).
