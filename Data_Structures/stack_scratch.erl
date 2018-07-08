@@ -16,6 +16,6 @@ pop(Stack) -> %Use pattern matching to get head, and rest of stack.
 %%%   {Head, NewStack} = pop(OldStack). %%%
 stackToList(Stack) -> stackToList(Stack,[]).
 
-stackToList({},List) -> List;
+stackToList({},List) ->w List;
 stackToList({Data,Stack},List) ->
   stackToList(Stack, [Data]++List).

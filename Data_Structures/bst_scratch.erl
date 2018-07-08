@@ -20,6 +20,8 @@ inTree({_,_,Right}, Value) ->
   inTree(Right,Value).
 
 
+
+
 minRight({Data,{},{}}) ->
   Data;
 minRight({_,Left,_}) ->
@@ -31,7 +33,7 @@ remove({},_) -> {};
 remove({Data,{},{}}, Data) ->
   {};
 %One child Right
-remove({Data,Right,{}}, Data) ->
+remove({Data,{},Right}, Data) ->
   Right;
 %One child Left
 remove({Data,Left,{}}, Data) ->
