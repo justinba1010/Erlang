@@ -1,52 +1,52 @@
 -module(avl_tree).
--export([new/0,push/2,inTree/2, remove/2]).
+-export([new/0,push/3,inTree/2, remove/2, len/2]).
+%After reading LYSEFGG
+%Decided needs to be cleaner
+new() -> {null,null,{},{}}.
 
-new() -> {null,0,{},{}}.
-
-
-%% {value, depth, right, left}
-push(Tree,Data) ->
-  push(Tree,Data,0).
-push({null,_,_,_}, Data,Acc) -> {Data,Acc,{},{}};
-push({},Data,Acc) ->
-  {Data,Acc,{},{}};
-push({Data,Depth,Left,Right}, Value, Acc) when Value < Data ->
-  {Data,Depth,push(Left,Value,Acc+1),Right};
-push({Data,Depth,Left,Right}, Value, Acc) ->
-  {Data,Depth,Left,push(Right,Value,Acc+1)}.
+push({null,null,{},{},null}, Key, Value) -> {Key, Value,{},{}};
+push({},Key, Value) ->
+  {Key, Value, {},{}};
+push({Key, Value ,Left,Right,_}, NewKey, NewValue) when NewKey < Key ->
+  {Key,Value, push(Left,NewKey, NewValue),Right,_};
+push({Key, Value ,Left,Right,_}, NewKey, NewValue) ->
+  {Key,Value, Left,push(Right,NewKey, NewValue),_}.
 
 inTree({},_) -> false;
-inTree({Data,_,_,_}, Data) ->
+inTree({Key,_,_,_,_}, Key) ->
   true;
-inTree({Data,_,Left,_}, Value) when Value < Data ->
+inTree({Data,_,Left,_,_}, Value) when Value < Data ->
   inTree(Left,Value);
-inTree({_,_,_,Right}, Value) ->
+inTree({_,_,_,Right,_}, Value) ->
   inTree(Right,Value).
-
-
-
-
-minRight({Data,_,{},{}}) ->
-  Data;
-minRight({_,_,Left,_}) ->
+minRight({Key,Value,{},{},_}) ->
+  {Key, Value};
+minRight({_,_,Left,_,_}) ->
   minRight(Left).
+
 
 %End of Tree
 remove({},_) -> {};
 %Remove Leaf
-remove({Data,_,{},{}}, Data) ->
+remove({_, _,{},{}}, _) ->
   {};
 %One child Right
-remove({Data,_,{},Right}, Data) ->
+remove({Key, _,{},Right,_}, Key) ->
   Right;
 %One child Left
-remove({Data,_,Left,{}}, Data) ->
+remove({Key,_,Left,{},_}, Key) ->
   Left;
 %Two children
-remove({Data,_,Left,Right}, Data) ->
-  Min = minRight(Left),
-  {Min, remove(Left,Min), Right};
-remove({Data,_,Left,Right}, Value) when Value < Data ->
-  {Data,remove(Left, Value),Right};
-remove({Data,Left,Right}, Value) ->
-  {Data,Left,remove(Right, Value)}.
+remove({Key,_,Left,Right, BalanceFactor}, Key) ->
+  {NewKey, NewValue} = minRight(Left),
+  {NewKey, NewValue, remove(Left,NewKey), Right, BalanceFactor},;
+remove({Key,Value,Left,Right,BalanceFactor}, RKey) when RKey < Key ->
+  {Key,Value,remove(Left, RKey),Right, BalanceFactor};
+remove({Key, Value,Left,Right, BalanceFactor}, RKey) ->
+  {Key,Value,Left,remove(Right, RKey), BalanceFactor}.
+
+
+max(X,Y) when X > Y -> X;
+max(X,Y) -> Y.
+min(X,Y) when X > Y -> Y;
+min(X,Y) -> X.
