@@ -11,8 +11,11 @@
 %After reading LYSEFGG
 %Decided needs to be cleaner
 % @doc new() -> new Tree
+% O(1) time
 new() -> {null,null,{},{},0}.
 % @doc push(Tree, Key, Value) -> pushes Key value into a new tree
+% O(log n) for normal push, depth function is n time per.
+% O(nlogn) time unfortunately it seems
 push({null,null,{},{},0}, Key, Value) -> {Key, Value,{},{},0};
 push({},Key, Value) ->
   {Key, Value, {},{},0};
@@ -24,6 +27,7 @@ push({Key, Value ,Left,Right,_}, NewKey, NewValue) ->
   rotate({Key,Value, Left, NewRight, depth(NewRight)-depth(Left)}).
 
 % @doc inTree(Tree, Key) -> true or false depending on if in tree
+% O(log n) time:
 inTree({},_) -> false;
 inTree({Key,_,_,_,_}, Key) ->
   true;
@@ -33,6 +37,7 @@ inTree({_,_,_,Right,_}, Value) ->
   inTree(Right,Value).
 
 % @doc minRight(Tree) -> returns min value in tree as {Key, Value}
+% O(log n) time
 minRight({Key,Value,{},{},_}) ->
   {Key, Value};
 minRight({_,_,Left,_,_}) ->
@@ -40,6 +45,7 @@ minRight({_,_,Left,_,_}) ->
 
 
 % @doc remove(Tree, Key) -> returns tree without value
+% O(log n) time
 %End of Tree
 remove({},_) -> {};
 %Remove Leaf
@@ -62,7 +68,9 @@ remove({Key, Value,Left,Right, BalanceFactor}, RKey) ->
 
 
 % @doc pattern matching rotations of tree
+% O(1) time
 %Left Rotation
+
 rotate({AKey, AValue, R1, {BKey, BValue, R2, {CKey, CValue, R3, R4,_}, 1}, 2}) ->
   {BKey, BValue, {AKey,AValue,R1,R2,0},{CKey, CValue,R3,R4,0},0};
 %Right Rotation
@@ -78,6 +86,7 @@ rotate(Tree) ->
   Tree.
 
 % @doc Depth function, tail recursive
+% O(n) time
 depth(Tree) -> depth(Tree,0).
 depth({},Acc) -> Acc;
 depth({_,_,Left,Right,_},Acc) ->
