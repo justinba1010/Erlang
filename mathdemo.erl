@@ -14,11 +14,12 @@ sum_fact_denom(Number) when Number < 0 -> 0;
 sum_fact_denom(Number) when Number =< 10 -> 1/factorial(Number) + sum_fact_denom(Number-1);
 sum_fact_denom(Number) when Number > 10 -> sum_fact_denom(10).
 
-%% @doc Factorial using recursion
-factorial(0) -> 1;
-factorial(1) -> 1;
+%% @doc Factorial using recursion; added Tail recursion for space complexity
 factorial(Number) when Number < 0 -> 0;
-factorial(Number) -> Number*factorial(Number-1).
+factorial(N) -> factorial(N,1).
+factorial(0, Acc) -> Acc;
+factorial(1, Acc) -> Acc;
+factorial(Number, Acc) -> factorial(Number-1, Acc*Number).
 
 
 %% @doc Sine function using Taylor Series.

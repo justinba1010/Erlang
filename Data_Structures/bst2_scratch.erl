@@ -19,10 +19,7 @@ inTree({Data,_,Left,_}, Value) when Value < Data ->
   inTree(Left,Value);
 inTree({_,_,_,Right}, Value) ->
   inTree(Right,Value).
-
-
-
-
+       esfd
 minRight({Key,Value,{},{}}) ->
   {Key, Value};
 minRight({_,_,Left,_}) ->

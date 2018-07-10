@@ -1,0 +1,365 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {chapter}{\numberline {2}Notation and glossary}{3}
+\contentsline {section}{\numberline {2.1}Symbols}{3}
+\contentsline {section}{\numberline {2.2}Sets}{4}
+\contentsline {section}{\numberline {2.3}Mappings}{4}
+\contentsline {section}{\numberline {2.4}Tables}{5}
+\contentsline {section}{\numberline {2.5}Types}{5}
+\contentsline {section}{\numberline {2.6}Grammar}{6}
+\contentsline {subsection}{\numberline {2.6.1}Grammar notation}{6}
+\contentsline {subsection}{\numberline {2.6.2}The lexical grammar}{8}
+\contentsline {subsection}{\numberline {2.6.3}The main grammar}{9}
+\contentsline {section}{\numberline {2.7}Glossary}{9}
+\contentsline {chapter}{\numberline {3}Lexical structure}{21}
+\contentsline {section}{\numberline {3.1}Lexical translation}{21}
+\contentsline {section}{\numberline {3.2}Character classes}{21}
+\contentsline {section}{\numberline {3.3}Line terminators}{22}
+\contentsline {section}{\numberline {3.4}Input elements}{22}
+\contentsline {section}{\numberline {3.5}White space}{23}
+\contentsline {section}{\numberline {3.6}Comments}{23}
+\contentsline {section}{\numberline {3.7}Separators}{24}
+\contentsline {section}{\numberline {3.8}Keywords}{24}
+\contentsline {section}{\numberline {3.9}Operators}{24}
+\contentsline {section}{\numberline {3.10}Escape sequences}{24}
+\contentsline {section}{\numberline {3.11}Integer literals}{25}
+\contentsline {section}{\numberline {3.12}Float literals}{27}
+\contentsline {section}{\numberline {3.13}Character literals}{27}
+\contentsline {section}{\numberline {3.14}String literals}{28}
+\contentsline {section}{\numberline {3.15}Atom literals}{28}
+\contentsline {section}{\numberline {3.16}Variables}{29}
+\contentsline {section}{\numberline {3.17}Universal pattern}{30}
+\contentsline {section}{\numberline {3.18}Separated token sequences}{30}
+\contentsline {chapter}{\numberline {4}Types and terms}{33}
+\contentsline {section}{\numberline {4.1}Types in \textsc {Erlang}}{33}
+\contentsline {section}{\numberline {4.2}Atoms}{34}
+\contentsline {section}{\numberline {4.3}Numbers}{34}
+\contentsline {subsection}{\numberline {4.3.1}Characters}{35}
+\contentsline {section}{\numberline {4.4}Refs}{35}
+\contentsline {section}{\numberline {4.5}Binaries}{36}
+\contentsline {section}{\numberline {4.6}Process identifiers}{36}
+\contentsline {section}{\numberline {4.7}Ports}{37}
+\contentsline {section}{\numberline {4.8}Tuples}{38}
+\contentsline {subsection}{\numberline {4.8.1}Records}{39}
+\contentsline {subsection}{\numberline {4.8.2}Functions}{39}
+\contentsline {section}{\numberline {4.9}Lists and conses}{39}
+\contentsline {subsection}{\numberline {4.9.1}Strings}{40}
+\contentsline {subsection}{\numberline {4.9.2}Association lists}{40}
+\contentsline {section}{\numberline {4.10}Relational and equality operators on terms}{41}
+\contentsline {subsection}{\numberline {4.10.1}Coercion}{41}
+\contentsline {section}{\numberline {4.11}Size of data structures}{41}
+\contentsline {subsection}{\numberline {4.11.1}Equality between terms}{43}
+\contentsline {subsection}{\numberline {4.11.2}The term order}{44}
+\contentsline {section}{\numberline {4.12}Lifetime of data structures}{45}
+\contentsline {section}{\numberline {4.13}Memory management}{46}
+\contentsline {chapter}{\numberline {5}Arithmetics}{47}
+\contentsline {section}{\numberline {5.1}Notation}{47}
+\contentsline {section}{\numberline {5.2}The integer type}{48}
+\contentsline {section}{\numberline {5.3}Integer operations}{49}
+\contentsline {section}{\numberline {5.4}The floating-point type}{50}
+\contentsline {section}{\numberline {5.5}Floating-point operations}{51}
+\contentsline {section}{\numberline {5.6}Conversions}{54}
+\contentsline {section}{\numberline {5.7}Representation and evaluation}{55}
+\contentsline {section}{\numberline {5.8}Notification}{55}
+\contentsline {section}{\numberline {5.9}Conversion to and from numerals}{56}
+\contentsline {subsection}{\numberline {5.9.1}Integer to decimal numeral}{56}
+\contentsline {subsection}{\numberline {5.9.2}Decimal numeral to integer}{56}
+\contentsline {subsection}{\numberline {5.9.3}Numeral with radix to integer}{56}
+\contentsline {subsection}{\numberline {5.9.4}Float to numeral}{57}
+\contentsline {subsection}{\numberline {5.9.5}Numeral to float}{57}
+\contentsline {chapter}{\numberline {6}Expressions and Evaluation}{59}
+\contentsline {section}{\numberline {6.1}Environments}{59}
+\contentsline {section}{\numberline {6.2}Binding, effect and result}{59}
+\contentsline {section}{\numberline {6.3}Variables and their scope}{61}
+\contentsline {section}{\numberline {6.4}Normal and Abrupt Completion of Evaluation}{61}
+\contentsline {section}{\numberline {6.5}Order of evaluation}{62}
+\contentsline {section}{\numberline {6.6}Pattern matching}{63}
+\contentsline {subsection}{\numberline {6.6.1}Patterns}{63}
+\contentsline {subsection}{\numberline {6.6.2}Definition of the pattern matching problem}{65}
+\contentsline {subsection}{\numberline {6.6.3}Coding pattern matching}{65}
+\contentsline {section}{\numberline {6.7}Functions, function applications and calls}{67}
+\contentsline {subsection}{\numberline {6.7.1}Call of a named function}{68}
+\contentsline {subsection}{\numberline {6.7.2}Call of an unnamed function}{69}
+\contentsline {subsection}{\numberline {6.7.3}Extent of function calls and last call optimization}{70}
+\contentsline {section}{\numberline {6.8}Bodies}{71}
+\contentsline {section}{\numberline {6.9}\texttt {catch} expressions}{72}
+\contentsline {section}{\numberline {6.10}Match expressions}{73}
+\contentsline {section}{\numberline {6.11}Send expressions}{74}
+\contentsline {section}{\numberline {6.12}Relational and equational operators}{75}
+\contentsline {subsection}{\numberline {6.12.1}Relational operators \texttt {<}, \texttt {=<}, \texttt {>}, and \texttt {>=}}{76}
+\contentsline {subsection}{\numberline {6.12.2}Exact equational operators \texttt {=:=}, \texttt {=/=}}{76}
+\contentsline {subsection}{\numberline {6.12.3}Arithmetic equational operators \texttt {==}, \texttt {/=}}{76}
+\contentsline {section}{\numberline {6.13}List concatenation operators}{76}
+\contentsline {subsection}{\numberline {6.13.1}List addition operator \texttt {++}}{77}
+\contentsline {subsection}{\numberline {6.13.2}List difference operator \texttt {--}}{77}
+\contentsline {section}{\numberline {6.14}Additive and shift operators}{78}
+\contentsline {subsection}{\numberline {6.14.1}Numeric addition operators \texttt {+} and \texttt {-}}{79}
+\contentsline {subsection}{\numberline {6.14.2}Integer bitwise operator \texttt {bor}}{79}
+\contentsline {subsection}{\numberline {6.14.3}Integer bitwise operator \texttt {bxor}}{79}
+\contentsline {subsection}{\numberline {6.14.4}Shift operators \texttt {bsl} and \texttt {bsr}}{79}
+\contentsline {subsection}{\numberline {6.14.5}Disjunction operator \texttt {or}}{80}
+\contentsline {subsection}{\numberline {6.14.6}Exclusion operator \texttt {xor}}{80}
+\contentsline {section}{\numberline {6.15}Multiplicative operators}{81}
+\contentsline {subsection}{\numberline {6.15.1}Numeric multiplication operator \texttt {*}}{81}
+\contentsline {subsection}{\numberline {6.15.2}Float division operator \texttt {/}}{81}
+\contentsline {subsection}{\numberline {6.15.3}Integer division operator \texttt {div}}{82}
+\contentsline {subsection}{\numberline {6.15.4}Integer remainder operator \texttt {rem}}{82}
+\contentsline {subsection}{\numberline {6.15.5}Integer bitwise operator \texttt {band}}{82}
+\contentsline {subsection}{\numberline {6.15.6}Conjunction operator \texttt {and}}{82}
+\contentsline {section}{\numberline {6.16}Unary operators}{83}
+\contentsline {subsection}{\numberline {6.16.1}Unary plus operator \texttt {+}}{83}
+\contentsline {subsection}{\numberline {6.16.2}Unary minus operator \texttt {-}}{83}
+\contentsline {subsection}{\numberline {6.16.3}Bitwise complement operator \texttt {bnot}}{84}
+\contentsline {subsection}{\numberline {6.16.4}Boolean complement operator \texttt {not}}{84}
+\contentsline {section}{\numberline {6.17}Record expressions}{84}
+\contentsline {subsection}{\numberline {6.17.1}Record field index}{85}
+\contentsline {subsection}{\numberline {6.17.2}Record field access}{85}
+\contentsline {subsection}{\numberline {6.17.3}Record creation}{86}
+\contentsline {subsection}{\numberline {6.17.4}Record update}{87}
+\contentsline {section}{\numberline {6.18}Function application expressions}{88}
+\contentsline {section}{\numberline {6.19}Primary Expressions}{89}
+\contentsline {subsection}{\numberline {6.19.1}Variables}{90}
+\contentsline {subsection}{\numberline {6.19.2}Atomic literals}{90}
+\contentsline {subsection}{\numberline {6.19.3}Tuple skeletons}{91}
+\contentsline {subsection}{\numberline {6.19.4}List skeletons}{92}
+\contentsline {subsection}{\numberline {6.19.5}List comprehensions}{93}
+\contentsline {subsection}{\numberline {6.19.6}Block expressions}{95}
+\contentsline {subsection}{\numberline {6.19.7}If expressions}{96}
+\contentsline {subsection}{\numberline {6.19.8}Case expressions}{97}
+\contentsline {subsection}{\numberline {6.19.9}Receive expressions}{99}
+\contentsline {subsection}{\numberline {6.19.10}\texttt {fun} expressions}{102}
+\contentsline {subsection}{\numberline {6.19.11}\texttt {query} expressions}{103}
+\contentsline {subsection}{\numberline {6.19.12}Parenthesized expressions}{103}
+\contentsline {section}{\numberline {6.20}Guards}{104}
+\contentsline {subsection}{\numberline {6.20.1}Guard tests}{104}
+\contentsline {subsection}{\numberline {6.20.2}Guard expressions}{106}
+\contentsline {chapter}{\numberline {7}Compiling a module}{109}
+\contentsline {section}{\numberline {7.1}Preprocessing}{109}
+\contentsline {section}{\numberline {7.2}Macros}{110}
+\contentsline {subsection}{\numberline {7.2.1}Macro definition}{110}
+\contentsline {subsection}{\numberline {7.2.2}Macro undefinition}{111}
+\contentsline {subsection}{\numberline {7.2.3}Macro expansion}{112}
+\contentsline {subsection}{\numberline {7.2.4}Initial set of macro definitions}{114}
+\contentsline {section}{\numberline {7.3}File inclusion}{115}
+\contentsline {section}{\numberline {7.4}Conditional compilation}{115}
+\contentsline {section}{\numberline {7.5}Parsing}{117}
+\contentsline {section}{\numberline {7.6}Parse transforms}{117}
+\contentsline {section}{\numberline {7.7}Code generation}{118}
+\contentsline {chapter}{\numberline {8}Programs and modules}{119}
+\contentsline {section}{\numberline {8.1}Module declarations}{119}
+\contentsline {section}{\numberline {8.2}The header part}{120}
+\contentsline {subsection}{\numberline {8.2.1}Export attributes}{120}
+\contentsline {subsection}{\numberline {8.2.2}Import attributes}{121}
+\contentsline {subsection}{\numberline {8.2.3}Compile attributes}{122}
+\contentsline {subsection}{\numberline {8.2.4}File attributes}{122}
+\contentsline {subsection}{\numberline {8.2.5}Wild attributes}{123}
+\contentsline {section}{\numberline {8.3}Program forms}{123}
+\contentsline {section}{\numberline {8.4}Record declarations}{124}
+\contentsline {section}{\numberline {8.5}The module information functions}{125}
+\contentsline {subsection}{\numberline {8.5.1}The function \texttt {module\char '137info/0}}{125}
+\contentsline {subsection}{\numberline {8.5.2}The function \texttt {module\char '137info/1}}{126}
+\contentsline {chapter}{\numberline {9}Dynamics of modules}{127}
+\contentsline {section}{\numberline {9.1}Loading or replacing a module}{128}
+\contentsline {section}{\numberline {9.2}Loaded modules}{129}
+\contentsline {section}{\numberline {9.3}Exported functions of a module}{129}
+\contentsline {section}{\numberline {9.4}Loading a new current version}{129}
+\contentsline {section}{\numberline {9.5}Making a current version old}{130}
+\contentsline {section}{\numberline {9.6}Purging an old version}{130}
+\contentsline {section}{\numberline {9.7}Checking a process for module usage}{130}
+\contentsline {chapter}{\numberline {10}Processes and concurrency}{131}
+\contentsline {section}{\numberline {10.1}An overview of \textsc {Erlang}\ processes}{131}
+\contentsline {section}{\numberline {10.2}Process names}{132}
+\contentsline {section}{\numberline {10.3}Linked processes}{132}
+\contentsline {section}{\numberline {10.4}Completion of processes and exit signals}{133}
+\contentsline {subsection}{\numberline {10.4.1}Process completion}{133}
+\contentsline {subsection}{\numberline {10.4.2}Sending exit signals explicitly}{134}
+\contentsline {subsection}{\numberline {10.4.3}Receiving an exit signal}{134}
+\contentsline {section}{\numberline {10.5}Communication by messages}{135}
+\contentsline {subsection}{\numberline {10.5.1}Sending a message}{135}
+\contentsline {subsection}{\numberline {10.5.2}Message arrival}{135}
+\contentsline {subsection}{\numberline {10.5.3}Receiving a message}{136}
+\contentsline {subsection}{\numberline {10.5.4}Order of messages}{136}
+\contentsline {section}{\numberline {10.6}Signals}{137}
+\contentsline {subsection}{\numberline {10.6.1}Sending signals}{137}
+\contentsline {subsection}{\numberline {10.6.2}Order of signals}{138}
+\contentsline {subsection}{\numberline {10.6.3}Arrival of signals}{138}
+\contentsline {section}{\numberline {10.7}Scheduling of processes}{139}
+\contentsline {section}{\numberline {10.8}Process group leaders}{140}
+\contentsline {section}{\numberline {10.9}Static and dynamic properties of a process}{141}
+\contentsline {subsection}{\numberline {10.9.1}Static properties}{141}
+\contentsline {subsection}{\numberline {10.9.2}Dynamic properties}{141}
+\contentsline {chapter}{\numberline {11}Nodes}{145}
+\contentsline {section}{\numberline {11.1}Single-node and multi-node systems}{145}
+\contentsline {section}{\numberline {11.2}Registering a node}{146}
+\contentsline {section}{\numberline {11.3}Initializing and terminating friendship}{147}
+\contentsline {section}{\numberline {11.4}Remote communication and magic cookies}{147}
+\contentsline {section}{\numberline {11.5}Process registry}{149}
+\contentsline {section}{\numberline {11.6}Monitoring of nodes}{149}
+\contentsline {section}{\numberline {11.7}The state of a node}{149}
+\contentsline {subsection}{\numberline {11.7.1}Static properties}{150}
+\contentsline {subsection}{\numberline {11.7.2}Dynamic properties}{150}
+\contentsline {chapter}{\numberline {12}Ports}{155}
+\contentsline {section}{\numberline {12.1}Overview of ports}{155}
+\contentsline {section}{\numberline {12.2}Drivers}{156}
+\contentsline {section}{\numberline {12.3}I/O terms}{156}
+\contentsline {section}{\numberline {12.4}Opening ports}{157}
+\contentsline {section}{\numberline {12.5}Controlling a port from an \textsc {Erlang}\ process}{159}
+\contentsline {section}{\numberline {12.6}Transmitting data from an \textsc {Erlang}\ process to the outside}{160}
+\contentsline {section}{\numberline {12.7}Transmitting data from the outside to an \textsc {Erlang}\ process}{160}
+\contentsline {section}{\numberline {12.8}Closing ports}{162}
+\contentsline {section}{\numberline {12.9}Ports, links and exit signals}{162}
+\contentsline {section}{\numberline {12.10}Static and dynamic properties of a port}{162}
+\contentsline {subsection}{\numberline {12.10.1}Static properties}{163}
+\contentsline {subsection}{\numberline {12.10.2}Dynamic properties}{164}
+\contentsline {chapter}{\numberline {13}Builtin functions}{167}
+\contentsline {section}{\numberline {13.1}Recognizer BIFs}{167}
+\contentsline {subsection}{\numberline {}{\texttt {atom/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {binary/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {constant/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {float/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {function/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {integer/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {list/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {number/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {pid/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {port/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {record/2}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {reference/1}}}{167}
+\contentsline {subsection}{\numberline {}{\texttt {tuple/1}}}{167}
+\contentsline {section}{\numberline {13.2}Builtin functions on atoms}{168}
+\contentsline {subsection}{\numberline {13.2.1}\texttt {atom\char '137to\char '137list/1}}{168}
+\contentsline {subsection}{\numberline {13.2.2}\texttt {list\char '137to\char '137atom/1}}{169}
+\contentsline {section}{\numberline {13.3}Builtin arithmetic functions}{169}
+\contentsline {subsection}{\numberline {13.3.1}\texttt {abs/1}}{169}
+\contentsline {subsection}{\numberline {13.3.2}\texttt {float/1}}{170}
+\contentsline {subsection}{\numberline {13.3.3}\texttt {float\char '137to\char '137list/1}}{171}
+\contentsline {subsection}{\numberline {13.3.4}\texttt {integer\char '137to\char '137list/1}}{172}
+\contentsline {subsection}{\numberline {13.3.5}\texttt {list\char '137to\char '137float/1}}{172}
+\contentsline {subsection}{\numberline {13.3.6}\texttt {list\char '137to\char '137integer/1}}{173}
+\contentsline {subsection}{\numberline {13.3.7}\texttt {round/1}}{174}
+\contentsline {subsection}{\numberline {13.3.8}\texttt {trunc/1}}{174}
+\contentsline {section}{\numberline {13.4}Builtin functions on binaries}{175}
+\contentsline {subsection}{\numberline {13.4.1}\texttt {binary\char '137to\char '137list/1}}{175}
+\contentsline {subsection}{\numberline {13.4.2}\texttt {binary\char '137to\char '137list/3}}{175}
+\contentsline {subsection}{\numberline {13.4.3}\texttt {binary\char '137to\char '137term/1}}{176}
+\contentsline {subsection}{\numberline {13.4.4}\texttt {concat\char '137binary/1}}{176}
+\contentsline {subsection}{\numberline {13.4.5}\texttt {list\char '137to\char '137binary/1}}{177}
+\contentsline {subsection}{\numberline {13.4.6}\texttt {size/1}}{177}
+\contentsline {subsection}{\numberline {13.4.7}\texttt {split\char '137binary/2}}{177}
+\contentsline {subsection}{\numberline {13.4.8}\texttt {term\char '137to\char '137binary/1}}{178}
+\contentsline {section}{\numberline {13.5}Builtin functions on tuples}{178}
+\contentsline {subsection}{\numberline {13.5.1}\texttt {element/2}}{178}
+\contentsline {subsection}{\numberline {13.5.2}\texttt {list\char '137to\char '137tuple/1}}{179}
+\contentsline {subsection}{\numberline {13.5.3}\texttt {setelement/3}}{179}
+\contentsline {subsection}{\numberline {13.5.4}\texttt {size/1}}{180}
+\contentsline {subsection}{\numberline {13.5.5}\texttt {tuple\char '137to\char '137list/1}}{180}
+\contentsline {section}{\numberline {13.6}Builtin functions on lists and conses}{181}
+\contentsline {subsection}{\numberline {13.6.1}\texttt {hd/1}}{181}
+\contentsline {subsection}{\numberline {13.6.2}\texttt {length/1}}{181}
+\contentsline {subsection}{\numberline {13.6.3}\texttt {tl/1}}{181}
+\contentsline {section}{\numberline {13.7}Builtin functions for modules}{182}
+\contentsline {subsection}{\numberline {13.7.1}\texttt {erlang:check\relax \texttt {\char `\_}process\relax \texttt {\char `\_}code/2}}{182}
+\contentsline {subsection}{\numberline {13.7.2}\texttt {erlang:delete\relax \texttt {\char `\_}module/1}}{183}
+\contentsline {subsection}{\numberline {13.7.3}\texttt {erlang:load\relax \texttt {\char `\_}module/2}}{183}
+\contentsline {subsection}{\numberline {13.7.4}\texttt {erlang:preloaded/0}}{184}
+\contentsline {subsection}{\numberline {13.7.5}\texttt {erlang:purge\relax \texttt {\char `\_}module/1}}{184}
+\contentsline {subsection}{\numberline {13.7.6}\texttt {erlang:module\relax \texttt {\char `\_}loaded/1}}{185}
+\contentsline {section}{\numberline {13.8}Builtin functions for functions and processes}{185}
+\contentsline {subsection}{\numberline {13.8.1}\texttt {apply/2}}{185}
+\contentsline {subsection}{\numberline {13.8.2}\texttt {apply/3}}{186}
+\contentsline {subsection}{\numberline {13.8.3}\texttt {exit/1}}{186}
+\contentsline {subsection}{\numberline {13.8.4}\texttt {exit/2}}{187}
+\contentsline {subsection}{\numberline {13.8.5}\texttt {group\relax \texttt {\char `\_}leader/0}}{187}
+\contentsline {subsection}{\numberline {13.8.6}\texttt {group\relax \texttt {\char `\_}leader/2}}{188}
+\contentsline {subsection}{\numberline {13.8.7}\texttt {link/1}}{188}
+\contentsline {subsection}{\numberline {13.8.8}\texttt {list\relax \texttt {\char `\_}to\relax \texttt {\char `\_}pid/1}}{188}
+\contentsline {subsection}{\numberline {13.8.9}\texttt {pid\relax \texttt {\char `\_}to\relax \texttt {\char `\_}list/1}}{189}
+\contentsline {subsection}{\numberline {13.8.10}\texttt {process\relax \texttt {\char `\_}flag/2}}{189}
+\contentsline {subsection}{\numberline {13.8.11}\texttt {process\relax \texttt {\char `\_}info/1}}{190}
+\contentsline {subsection}{\numberline {13.8.12}\texttt {process\relax \texttt {\char `\_}info/2}}{190}
+\contentsline {subsection}{\numberline {13.8.13}\texttt {processes/0}}{192}
+\contentsline {subsection}{\numberline {13.8.14}\texttt {self/0}}{192}
+\contentsline {subsection}{\numberline {13.8.15}\texttt {spawn/3}}{192}
+\contentsline {subsection}{\numberline {13.8.16}\texttt {spawn/4}}{193}
+\contentsline {subsection}{\numberline {13.8.17}\texttt {spawn\relax \texttt {\char `\_}link/3}}{193}
+\contentsline {subsection}{\numberline {13.8.18}\texttt {spawn\relax \texttt {\char `\_}link/4}}{194}
+\contentsline {subsection}{\numberline {13.8.19}\texttt {unlink/1}}{194}
+\contentsline {section}{\numberline {13.9}Builtin functions for process dictionaries}{195}
+\contentsline {subsection}{\numberline {13.9.1}\texttt {erase/0}}{195}
+\contentsline {subsection}{\numberline {13.9.2}\texttt {erase/1}}{195}
+\contentsline {subsection}{\numberline {13.9.3}\texttt {get/0}}{196}
+\contentsline {subsection}{\numberline {13.9.4}\texttt {get/1}}{196}
+\contentsline {subsection}{\numberline {13.9.5}\texttt {get\char '137keys/1}}{196}
+\contentsline {subsection}{\numberline {13.9.6}\texttt {put/2}}{197}
+\contentsline {section}{\numberline {13.10}Builtin functions for nodes}{197}
+\contentsline {subsection}{\numberline {13.10.1}\texttt {erlang:disconnect\relax \texttt {\char `\_}node/1}}{197}
+\contentsline {subsection}{\numberline {13.10.2}\texttt {erlang:get\relax \texttt {\char `\_}cookie/0}}{198}
+\contentsline {subsection}{\numberline {13.10.3}\texttt {erlang:halt/0}}{198}
+\contentsline {subsection}{\numberline {13.10.4}\texttt {is\relax \texttt {\char `\_}alive/0}}{199}
+\contentsline {subsection}{\numberline {13.10.5}\texttt {monitor\relax \texttt {\char `\_}node/2}}{199}
+\contentsline {subsection}{\numberline {13.10.6}\texttt {node/0}}{200}
+\contentsline {subsection}{\numberline {13.10.7}\texttt {node/1}}{200}
+\contentsline {subsection}{\numberline {13.10.8}\texttt {nodes/0}}{201}
+\contentsline {subsection}{\numberline {13.10.9}\texttt {processes/0}}{201}
+\contentsline {subsection}{\numberline {13.10.10}\texttt {erlang:set\relax \texttt {\char `\_}cookie/2}}{201}
+\contentsline {subsection}{\numberline {13.10.11}\texttt {set\relax \texttt {\char `\_}node/2}}{202}
+\contentsline {subsection}{\numberline {13.10.12}\texttt {erlang:set\relax \texttt {\char `\_}node/3}}{202}
+\contentsline {subsection}{\numberline {13.10.13}\texttt {statistics/1}}{203}
+\contentsline {section}{\numberline {13.11}Builtin functions for process registries}{204}
+\contentsline {subsection}{\numberline {13.11.1}\texttt {register/2}}{204}
+\contentsline {subsection}{\numberline {13.11.2}\texttt {registered/0}}{204}
+\contentsline {subsection}{\numberline {13.11.3}\texttt {unregister/1}}{205}
+\contentsline {subsection}{\numberline {13.11.4}\texttt {whereis/1}}{205}
+\contentsline {section}{\numberline {13.12}Builtin functions for I/O and ports}{206}
+\contentsline {subsection}{\numberline {13.12.1}\texttt {open\relax \texttt {\char `\_}port/2}}{206}
+\contentsline {subsection}{\numberline {13.12.2}\texttt {port\relax \texttt {\char `\_}close/1}}{206}
+\contentsline {subsection}{\numberline {13.12.3}\texttt {port\relax \texttt {\char `\_}info/1}}{207}
+\contentsline {subsection}{\numberline {13.12.4}\texttt {port\relax \texttt {\char `\_}info/2}}{207}
+\contentsline {subsection}{\numberline {13.12.5}\texttt {ports/0}}{208}
+\contentsline {section}{\numberline {13.13}Miscellaneous builtin functions}{208}
+\contentsline {subsection}{\numberline {13.13.1}\texttt {date/0}}{208}
+\contentsline {subsection}{\numberline {13.13.2}\texttt {erlang:hash/2}}{209}
+\contentsline {subsection}{\numberline {13.13.3}\texttt {make\relax \texttt {\char `\_}ref/0}}{209}
+\contentsline {subsection}{\numberline {13.13.4}\texttt {now/0}}{210}
+\contentsline {subsection}{\numberline {13.13.5}\texttt {throw/1}}{210}
+\contentsline {subsection}{\numberline {13.13.6}\texttt {time/0}}{210}
+\contentsline {section}{\numberline {13.14}Reserved function names}{211}
+\contentsline {chapter}{\numberline {14}Libraries}{213}
+\contentsline {section}{\numberline {14.1}The \texttt {file} library}{213}
+\contentsline {section}{\numberline {14.2}The \texttt {io} library}{213}
+\contentsline {section}{\numberline {14.3}The \texttt {lists} library}{213}
+\contentsline {section}{\numberline {14.4}The \texttt {math} library}{213}
+\contentsline {subsection}{\numberline {14.4.1}\texttt {acos/1}}{214}
+\contentsline {subsection}{\numberline {14.4.2}\texttt {asin/1}}{214}
+\contentsline {subsection}{\numberline {14.4.3}\texttt {atan/1}}{214}
+\contentsline {subsection}{\numberline {14.4.4}\texttt {atan2/2}}{215}
+\contentsline {subsection}{\numberline {14.4.5}\texttt {cos/1}}{215}
+\contentsline {subsection}{\numberline {14.4.6}\texttt {cosh/1}}{216}
+\contentsline {subsection}{\numberline {14.4.7}\texttt {exp/1}}{216}
+\contentsline {subsection}{\numberline {14.4.8}\texttt {log/1}}{216}
+\contentsline {subsection}{\numberline {14.4.9}\texttt {log10/1}}{217}
+\contentsline {subsection}{\numberline {14.4.10}\texttt {pi/0}}{217}
+\contentsline {subsection}{\numberline {14.4.11}\texttt {pow/2}}{217}
+\contentsline {subsection}{\numberline {14.4.12}\texttt {sin/1}}{218}
+\contentsline {subsection}{\numberline {14.4.13}\texttt {sinh/1}}{218}
+\contentsline {subsection}{\numberline {14.4.14}\texttt {sqrt/1}}{218}
+\contentsline {subsection}{\numberline {14.4.15}\texttt {tan/1}}{219}
+\contentsline {subsection}{\numberline {14.4.16}\texttt {tanh/1}}{219}
+\contentsline {section}{\numberline {14.5}The \texttt {string} library}{219}
+\contentsline {chapter}{\numberline {A}Summary of \textsc {Erlang}\ expressions}{221}
+\contentsline {chapter}{\numberline {B}Parse trees}{223}
+\contentsline {section}{\numberline {B.1}Module declarations and forms}{223}
+\contentsline {section}{\numberline {B.2}Atomic literals}{225}
+\contentsline {section}{\numberline {B.3}Patterns}{225}
+\contentsline {section}{\numberline {B.4}Expressions}{226}
+\contentsline {section}{\numberline {B.5}Guards}{229}
+\contentsline {chapter}{\numberline {C}Portable hashing}{231}
+\contentsline {section}{\numberline {C.1}Definitions}{231}
+\contentsline {section}{\numberline {C.2}The hash function}{232}
+\contentsline {chapter}{\numberline {D}The external term format}{235}
+\contentsline {section}{\numberline {D.1}Context}{235}
+\contentsline {section}{\numberline {D.2}Definitions}{236}
+\contentsline {section}{\numberline {D.3}The transformation}{237}
+\contentsline {chapter}{\numberline {E}Grammar}{239}
+\contentsline {section}{\numberline {E.1}The lexical grammar}{239}
+\contentsline {section}{\numberline {E.2}The main grammar}{239}
+\contentsline {section}{\numberline {E.3}The preprocessor grammar}{239}
