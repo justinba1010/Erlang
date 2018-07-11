@@ -59,12 +59,13 @@ remove({Key,_,Left,{},_}, Key) ->
   Left;
 %Two children
 remove({Key,_,Left,Right, _}, Key) ->
-  {NewKey, NewValue} = minRight(Left),
-  rotate({NewKey, NewValue, remove(Left,NewKey), Right, depth(Right)-depth(Left)});
+  {NewKey, NewValue} = minRight(Right),
+  NewRight = remove(Right,NewKey),
+  rotate({NewKey, NewValue, Left, NewRight, depth(NewRight)-depth(Left)});
 remove({Key,Value,Left,Right,_}, RKey) when RKey < Key ->
-  rotate({Key,Value,remove(Left, RKey),Right, depth(Right)-depth(Left)});
+  rotate({Key,Value,remove(Left, RKey),Right, depth(Right)-depth(remove(Left, RKey))});
 remove({Key, Value,Left,Right, _}, RKey) ->
-  rotate({Key,Value,Left,remove(Right, RKey), depth(Right)-depth(Left)}).
+  rotate({Key,Value,Left,remove(Right, RKey), depth(remove(Right, RKey))-depth(Left)}).
 
 % @doc pattern matching rotations of tree
 % O(1) time
