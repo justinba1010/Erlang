@@ -10,13 +10,10 @@
 <hr>
 
 <h1>Module avl_tree</h1>
-<ul class="index"><li><a href="#description">Description</a></li><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>AVL Tree Implementation.
-<p>Copyright © 2018 by Justin Baum</p>
+<ul class="index"><li><a href="#index">Function Index</a></li><li><a href="#functions">Function Details</a></li></ul>
 
-<p><b>Version:</b> 0.1</p>
 <p><b>Authors:</b> Justin Baum (<a href="mailto:jabaum@cec.sc.edu"><tt>jabaum@cec.sc.edu</tt></a>) [<em>web site:</em> <tt><a href="http://github.com/justinba1010/" target="_top">http://github.com/justinba1010/</a></tt>].</p>
 
-<h2><a name="description">Description</a></h2>AVL Tree Implementation
 <h2><a name="index">Function Index</a></h2>
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#depth-1">depth/1</a></td><td>Depth function, tail recursive
  O(n) time.</td></tr>
@@ -27,7 +24,7 @@
 <tr><td valign="top"><a href="#push-3">push/3</a></td><td>push(Tree, Key, Value) -&gt; pushes Key value into a new tree
  O(log n) for normal push, depth function is n time per.</td></tr>
 <tr><td valign="top"><a href="#remove-2">remove/2</a></td><td>remove(Tree, Key) -&gt; returns tree without value
- O(log n) time
+ O(n log n) time
 End of Tree.</td></tr>
 <tr><td valign="top"><a href="#rotate-1">rotate/1</a></td><td>pattern matching rotations of tree
  O(1) time
@@ -59,13 +56,13 @@ Left Rotation.</td></tr>
 <p><tt>push(X1, Key, Value) -&gt; any()</tt></p>
 </div><p>push(Tree, Key, Value) -&gt; pushes Key value into a new tree
  O(log n) for normal push, depth function is n time per.
- O(nlogn) time unfortunately it seems</p>
+ O(n log n)</p>
 
 <h3 class="function"><a name="remove-2">remove/2</a></h3>
 <div class="spec">
 <p><tt>remove(X1, Key) -&gt; any()</tt></p>
 </div><p>remove(Tree, Key) -&gt; returns tree without value
- O(log n) time
+ O(n log n) time
 End of Tree</p>
 
 <h3 class="function"><a name="rotate-1">rotate/1</a></h3>

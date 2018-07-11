@@ -1,4 +1,4 @@
-%% @author Justin Baum <jabaum@cec.sc.edu> [http://github.com/justinba1010/]
+  %% @author Justin Baum <jabaum@cec.sc.edu> [http://github.com/justinba1010/]
 %% @doc AVL Tree Implementation
 %% @copyright 2018 by Justin Baum
 %% @version 0.1
@@ -15,7 +15,7 @@
 new() -> {null,null,{},{},0}.
 % @doc push(Tree, Key, Value) -> pushes Key value into a new tree
 % O(log n) for normal push, depth function is n time per.
-% O(nlogn) time unfortunately it seems
+% O(n log n)
 push({null,null,{},{},0}, Key, Value) -> {Key, Value,{},{},0};
 push({},Key, Value) ->
   {Key, Value, {},{},0};
@@ -45,7 +45,7 @@ minRight({_,_,Left,_,_}) ->
 
 
 % @doc remove(Tree, Key) -> returns tree without value
-% O(log n) time
+% O(n log n) time
 %End of Tree
 remove({},_) -> {};
 %Remove Leaf
@@ -58,14 +58,13 @@ remove({Key, _,{},Right,_}, Key) ->
 remove({Key,_,Left,{},_}, Key) ->
   Left;
 %Two children
-remove({Key,_,Left,Right, BalanceFactor}, Key) ->
+remove({Key,_,Left,Right, _}, Key) ->
   {NewKey, NewValue} = minRight(Left),
-  {NewKey, NewValue, remove(Left,NewKey), Right, BalanceFactor};
-remove({Key,Value,Left,Right,BalanceFactor}, RKey) when RKey < Key ->
-  {Key,Value,remove(Left, RKey),Right, BalanceFactor};
-remove({Key, Value,Left,Right, BalanceFactor}, RKey) ->
-  {Key,Value,Left,remove(Right, RKey), BalanceFactor}.
-
+  rotate({NewKey, NewValue, remove(Left,NewKey), Right, depth(Right)-depth(Left)});
+remove({Key,Value,Left,Right,_}, RKey) when RKey < Key ->
+  rotate({Key,Value,remove(Left, RKey),Right, depth(Right)-depth(Left)});
+remove({Key, Value,Left,Right, _}, RKey) ->
+  rotate({Key,Value,Left,remove(Right, RKey), depth(Right)-depth(Left)}).
 
 % @doc pattern matching rotations of tree
 % O(1) time
