@@ -7,7 +7,7 @@
 
 
 -module(avl_tree).
--export([new/0,push/3,inTree/2, remove/2, rotate/1, depth/1]).
+-export([new/0,push/3,inTree/2, remove/2, rotate/1, depth/1, balance_tree/1]).
 %After reading LYSEFGG
 %Decided needs to be cleaner
 % @doc new() -> new Tree
@@ -38,14 +38,16 @@ inTree({_,_,_,Right,_}, Value) ->
 
 % @doc minRight(Tree) -> returns min value in tree as {Key, Value}
 % O(log n) time
-minRight({Key,Value,{},{},_}) ->
+minRight({Key,Value,{},_,_}) ->
   {Key, Value};
 minRight({_,_,Left,_,_}) ->
   minRight(Left).
 
+% @doc search(Tree, Value) -> {Key, Value}
+
 
 % @doc remove(Tree, Key) -> returns tree without value
-% O(n log n) time
+% A Fuck ton of time
 %End of Tree
 remove({},_) -> {};
 %Remove Leaf
@@ -53,19 +55,19 @@ remove({_, _,{},{}}, _) ->
   {};
 %One child Right
 remove({Key, _,{},Right,_}, Key) ->
-  Right;
+  rotate(Right);
 %One child Left
 remove({Key,_,Left,{},_}, Key) ->
-  Left;
+  rotate(Left);
 %Two children
 remove({Key,_,Left,Right, _}, Key) ->
   {NewKey, NewValue} = minRight(Right),
   NewRight = remove(Right,NewKey),
-  rotate({NewKey, NewValue, Left, NewRight, depth(NewRight)-depth(Left)});
+  rotate({NewKey, NewValue, Left, NewRight, 0});
 remove({Key,Value,Left,Right,_}, RKey) when RKey < Key ->
-  rotate({Key,Value,remove(Left, RKey),Right, depth(Right)-depth(remove(Left, RKey))});
+  rotate({Key,Value,remove(Left, RKey),Right, 0});
 remove({Key, Value,Left,Right, _}, RKey) ->
-  rotate({Key,Value,Left,remove(Right, RKey), depth(remove(Right, RKey))-depth(Left)}).
+  rotate({Key,Value,Left,remove(Right, RKey), 0}).
 
 % @doc pattern matching rotations of tree
 % O(1) time
@@ -84,6 +86,15 @@ rotate({AKey, AValue, R1, {CKey, CValue, {BKey, BValue, R2, R3,_},R4, -1}, 2}) -
   {BKey, BValue, {AKey,AValue,R1,R2,0},{CKey, CValue,R3,R4,0},0};
 rotate(Tree) ->
   Tree.
+
+
+% @doc Balance Tree
+% O(n) time I believe
+balance_tree({}) -> {};
+balance_tree({Key, Value, Left, Right, _}) ->
+  NewLeft = balance_tree(Left),
+  NewRight = balance_tree(Right),
+  rotate({Key, Value, NewLeft, NewRight, depth(NewRight) - depth(NewLeft)}).
 
 % @doc Depth function, tail recursive
 % O(n) time
