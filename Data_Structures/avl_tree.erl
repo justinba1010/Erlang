@@ -45,7 +45,7 @@ minRight({_,_,Left,_,_}) ->
 
 
 % @doc remove(Tree, Key) -> returns tree without value
-% O(n log n) time
+% A Fuck ton of time
 %End of Tree
 remove({},_) -> {};
 %Remove Leaf
@@ -61,11 +61,11 @@ remove({Key,_,Left,{},_}, Key) ->
 remove({Key,_,Left,Right, _}, Key) ->
   {NewKey, NewValue} = minRight(Right),
   NewRight = remove(Right,NewKey),
-  rotate({NewKey, NewValue, Left, NewRight, depth(NewRight)-depth(Left)});
+  balance({NewKey, NewValue, Left, NewRight, 0});
 remove({Key,Value,Left,Right,_}, RKey) when RKey < Key ->
-  rotate({Key,Value,remove(Left, RKey),Right, depth(Right)-depth(remove(Left, RKey))});
+  balance({Key,Value,remove(Left, RKey),Right, 0)});
 remove({Key, Value,Left,Right, _}, RKey) ->
-  rotate({Key,Value,Left,remove(Right, RKey), depth(remove(Right, RKey))-depth(Left)}).
+  balance({Key,Value,Left,remove(Right, RKey), 0}).
 
 % @doc pattern matching rotations of tree
 % O(1) time
@@ -84,6 +84,13 @@ rotate({AKey, AValue, R1, {CKey, CValue, {BKey, BValue, R2, R3,_},R4, -1}, 2}) -
   {BKey, BValue, {AKey,AValue,R1,R2,0},{CKey, CValue,R3,R4,0},0};
 rotate(Tree) ->
   Tree.
+
+% @doc Balance Tree
+% O(n) time I believe
+balance_tree({Key, Value, Left, Right, _}) when Depth > 1 orelse Depth < 1 ->
+  NewLeft = balance_tree(Left),
+  NewRight = balance_tree(Right),
+  rotate({Key, Value, NewLeft, NewRight, depth(NewRight) - depth(NewLeft)}).
 
 % @doc Depth function, tail recursive
 % O(n) time
