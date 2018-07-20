@@ -4,7 +4,29 @@
 
 % Complete the minuteToWinIt function below.
 minuteToWinIt(A, K) ->
-    % Return the minimum amount of time in minutes.
+    {Dict, Length} = getDict(A, K, dict:new(), 0),
+    Length - getMax(dict:to_list(Dict)).
+
+getMax(List) ->
+    [{_,Value}|_] = List,
+    getMax(List, Value).
+
+getMax([], Max) -> Max;
+getMax([{_, Value}| Tail], Max) when Value > Max ->
+    getMax(Tail, Value);
+getMax([_| Tail], Max) ->
+    getMax(Tail, Max).
+
+
+addOne(X) ->
+    X + 1.
+
+getDict([], _, Dict, Counter) ->
+    {Dict,Counter};
+getDict([A|Tail], K, Dict, Counter)->
+    case dict:is_key(A - Counter*K, Dict) of
+        true -> getDict(Tail, K, dict:update(A-Counter*K, fun (X) -> X+1 end, Dict), Counter+1);
+        false -> getDict(Tail, K, dict:store(A-Counter*K, 1, Dict), Counter+1) end.
 
 read_multiple_lines_as_list_of_strings(N) ->
     read_multiple_lines_as_list_of_strings(N, []).
