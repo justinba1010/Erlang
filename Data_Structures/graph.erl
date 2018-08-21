@@ -1,23 +1,14 @@
 -module(graph).
--export([]).
-
-% {[{Key, Value, [Edges(Key)]},...], Keys}
-
-new() -> {[],0}.
+-export([blank/0, addVertex/2]).
 
 
-addVertex({Graph, Keys},Vertex) ->
-  {[{Keys, Vertex,[]}] ++ Graph, Keys+1}.
+-record(  graph,  {vertices = [] :: [vertex]}).
+-record(  vertex, {vertex = undefined, edges = []}).
+-record
+blank() ->
+  #graph{}.
 
-addDirEdge({[]}, Vertex1, Vertex2) when inList(getEdges(Vertex1), Vertex2) ->
-
-
-getEdges({[]},_) -> [];
-getEdges({[{Vertex1, _, Edges}|Tail],_},Vertex1) ->
-  Edges;
-getEdges({[_|Tail]},Vertex1) -> getEdges(Tail,Vertex1).
-
-
-inList([],_) -> false;
-inList([Data,_],Data) -> true;
-inList([_,Tail],Data) -> inList(Tail,Data).
+addVertex(Graph, Vertex) ->
+  Vertices = Graph#graph.vertices,
+  Edges = Graph#graph.edges,
+  #graph{vertices = [Vertex] ++ Vertices, edges = Edges}.
