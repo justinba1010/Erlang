@@ -1,13 +1,15 @@
 -module(kitchen).
 -compile(export_all).
 
+%% From LYSEFGG
+
 fridge1() ->
   receive
     {From, {store, _Food}} ->
       From ! {self(), ok},
       fridge1();
     {From, {take, _Food}} ->
-      From ! {sekf(), not_found},
+      From ! {self(), not_found},
       fridge1();
     terminate ->
       ok
@@ -18,6 +20,36 @@ fridge2(FoodList) ->
     {From, {store, Food}} ->
       From ! {self(), ok},
       fridge2([Food] ++ FoodList);
-    {From, {take, Food}} -->
+    {From, {take, Food}} ->
       case lists:member(Food, FoodList) of
         true ->
+          From ! {self(), {ok, Food}},
+          fridge2(lists:delete(Food, FoodList));
+        false ->
+          From ! {self(), not_found},
+          fridge2(FoodList)
+        end;
+      terminate ->
+        ok
+    after 3000 ->
+      timeout
+  end.
+
+store(Pid, Food) ->
+  Pid ! {self(), {store, Food}},
+  receive
+    {Pid, Msg} -> Msg
+  after 3000 ->
+    timeout
+  end.
+
+take(Pid, Food) ->
+  Pid ! {self(), {take, Food}},
+  receive
+    {Pid, Msg} -> Msg
+  after 3000 ->
+    timeout
+  end.
+
+start(FoodList) ->
+  spawn(?MODULE, fridge2, [FoodList]).
